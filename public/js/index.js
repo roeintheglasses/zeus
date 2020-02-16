@@ -31,7 +31,7 @@ function manualForecast(error) {
 
 function showManualForecast() {
 
-    messageOne.textContent = 'Autolocaiton not working, Please use manual search!'
+    messageOne.textContent = 'Location access is not available. \nPlease use manual search!'
     messageTwo.textContent = ''
 
     weatherForm.addEventListener('submit', (e) => {

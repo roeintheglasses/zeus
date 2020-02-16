@@ -1,55 +1,181 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html,
+
 body {
-    color: #333333;
-    font-family: arial;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
+    background: rgb(25, 22, 41);
+    text-align: center;
+    font-family: monospace;
 
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh
-}
-
-.main-content {
-    flex-grow: 1;
-}
-
-footer {
-    color: #888888;
-    border-top: 1px solid #eeeeee;
-    margin-top: 16px;
-    padding: 16px 0;
 }
 
 header {
-    margin-top: 16px;
-    margin-bottom: 48px;
+    margin-top: -9%;
 }
 
-h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
+
+svg {
+    display: inline-block;
+    font: 10.5em 'Montserrat';
+    width: auto;
+    height: auto;
 }
 
-header a {
-    color: #888888;
-    margin-right: 16px;
+
+.text-copy {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-dasharray: 6% 29%;
+    stroke-width: 4px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+    stroke: rgb(70, 255, 255);
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+    stroke: rgb(70, 203, 255);
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+    stroke: rgb(70, 150, 255);
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+    stroke: rgb(255, 144, 70);
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+    stroke: rgb(248, 176, 206);
+    animation-delay: -5s;
+}
+
+.text-copy:nth-child(6) {
+    stroke: rgb(169, 255, 70);
+    animation-delay: -6s;
+}
+
+
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
+}
+
+
+p {
+    font-weight: 600;
+}
+
+#catchephrase {
+    margin-top: -4.5%;
+    margin-bottom: 2%;
+    color: rgb(81, 238, 102);
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+}
+
+#message-1,
+#message-2 {
+
+    margin-top: 3%;
+    color: rgb(81, 238, 102);
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 15px;
+    text-transform: capitalize;
+    word-wrap: break-word;
+
+}
+
+
+#enter {
+    border: none;
+    padding: 12px 15px;
+    margin-left: 10px;
+    border-radius: 7px;
+    color: #04A1BF;
+    background-color: #025F70;
+    transition: all 0.75s ease;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75 ease;
+    font-weight: normal;
+}
+
+#enter:hover {
+    background-color: #02798F;
+    color: #FFCD5D;
+}
+
+
+input {
+    border-radius: 7px;
+    min-width: 20%;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+    border: none;
+}
+
+
+footer {
+    color: white;
+    align-items: center;
+    font-family: monospace;
+    margin-top: 15%;
+}
+
+a {
+    color: rgb(240, 255, 105);
     text-decoration: none;
 }
 
+a:hover {
+    color: rgb(105, 255, 173);
+}
+
+
 .portrait {
-    width: 250px;
+    border-radius: 50%;
+    width: 100px;
 }
 
-input {
-    border: 1px solid #cccccc;
-    padding: 8px;
-}
 
-button {
-    cursor: pointer;
-    border: 1px solid #888888;
-    background: #888888;
-    color: white;
-    padding: 8px;
+@media (max-width:736px) {
+
+    header {
+        margin-top: -10%;
+    }
+
+    svg {
+        width: 180%;
+        margin-left: -40%;
+    }
+
+    #catchephrase {
+        margin-top: -8.5%;
+        margin-bottom: 5%;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #message-1,
+    #message-2 {
+        margin-top: 5%;
+        font-size: 1rem;
+        text-transform: capitalize;
+        word-wrap: break-word;
+    }
+
 }

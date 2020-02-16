@@ -3,24 +3,40 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Zeus</title>
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
+    
 </head>
 
 <body>
-    <div class="main-content">
-        {{>header}}
-        <p>Dumb weather app for super smart people.</p>
 
-        <form>
-            <input placeholder="Location">
-            <button>Search</button>
-        </form>
+    <div class="container">
+		<div class="row">
+			<div class="intro col-12">
+            {{>header}}
+			
+				<div>
+					<div class="border1"></div>
+					<div c </div> </div> </div> <div class="row">
+						<div class="helpText col-12">
+							<p id="catchephrase">Dumb weather app for super smart people.</p>
+						</div>
+					</div>
 
-        <p id="message-1"></p>
-        <p id="message-2"></p>
-    </div>
+					<div class="row">
+						<form class="col-12">
+							<input id="userInput" type="text" placeholder="Enter location here!">
+							<button id="enter">Search</i></button>
+						</form>
+					</div>
+
+                    <pre id="message-1"></pre>
+                    <pre id="message-2"></pre>
+
+				</div>
 
     {{>footer}}
 
