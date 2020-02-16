@@ -1,12 +1,12 @@
 {
-  "name": "weatherWizard",
+  "name": "Zeus",
   "version": "1.0.0",
   "description": "Dumb weather app for super smart people.",
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js"
   },
-  "keywords": [],
+  "keywords": [weather, zeus],
   "author": "Hrishikesh Jangir",
   "license": "ISC",
   "dependencies": {
