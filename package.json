@@ -1,6 +1,6 @@
 {
   "name": "zeus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dumb weather app for super smart people.",
   "main": "index.js",
   "scripts": {
