@@ -1,13 +1,13 @@
 {
   "name": "weatherWizard",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Dumb weather app for super smart people.",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hrishikesh Jangir",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
