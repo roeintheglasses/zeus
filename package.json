@@ -4,7 +4,8 @@
   "description": "Dumb weather app for super smart people.",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   "keywords": [],
   "author": "Hrishikesh Jangir",
