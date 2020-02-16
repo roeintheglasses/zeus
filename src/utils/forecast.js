@@ -14,7 +14,7 @@ const forecast = (lat, long, callback) => {
         } else if (body.error) {
             callback("Location not found!", undefined)
         } else {
-            callback(undefined, body.daily.data[0].summary + '\nIt is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.')
+            callback(undefined, body.daily.data[0].summary + 'It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.')
         }
     })
 
