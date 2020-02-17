@@ -82,10 +82,13 @@ p {
     text-align: center;
 }
 
+#message-1{
+    margin-top: 3%; 
+}
+
 #message-1,
 #message-2 {
 
-    margin-top: 3%;
     color: rgb(81, 238, 102);
     font-family: monospace;
     font-size: 16px;
