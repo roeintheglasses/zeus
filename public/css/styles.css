@@ -3,7 +3,7 @@
 html,
 
 body {
-    background: rgb(25, 22, 41);
+    background: #161e29;
     text-align: center;
     font-family: monospace;
 
@@ -69,9 +69,6 @@ svg {
 }
 
 
-p {
-    font-weight: 600;
-}
 
 #catchephrase {
     margin-top: -4.5%;
@@ -80,44 +77,6 @@ p {
     font-family: monospace;
     font-size: 20px;
     text-align: center;
-}
-
-#message-1{
-    margin-top: 3%; 
-}
-
-#message-1,
-#message-2 {
-
-    color: rgb(81, 238, 102);
-    font-family: monospace;
-    font-size: 16px;
-    text-align: center;
-    padding: 10px 15px;
-    text-transform: capitalize;
-    word-wrap: break-word;
-
-}
-
-
-#enter {
-    border: none;
-    padding: 12px 15px;
-    margin-left: 10px;
-    border-radius: 7px;
-    color: #04A1BF;
-    background-color: #025F70;
-    transition: all 0.75s ease;
-    -webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    -o-transition: all 0.75 ease;
-    font-weight: normal;
-}
-
-#enter:hover {
-    background-color: #02798F;
-    color: #FFCD5D;
 }
 
 
@@ -131,16 +90,89 @@ input {
     border: none;
 }
 
+#locationInput,
+#locate-me {
+    display: inline-block;
+}
+
+
+#enter,
+#locate-me {
+    border: none;
+    padding: 12px 15px;
+    margin-left: 10px;
+    border-radius: 7px;
+    color: #04A1BF;
+    background-color: #025F70;
+    transition: all 0.75s ease;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75 ease;
+    font-weight: bold;
+}
+
+#enter:hover,
+#locate-me:hover {
+    background-color: #02798F;
+    color: #FFCD5D;
+}
+
+#loading {
+    font-size: 2rem;
+    color: rgb(209, 236, 58);
+    margin-top: 40%;
+}
+
+.main-icons {
+    margin-top: 4%;
+    margin-left: -10%;
+}
+
+#temprature,
+#location {
+    margin-top: -6.2%;
+    margin-left: 22%;
+    color: rgb(209, 236, 58);
+
+
+    font-family: Montserrat;
+    font-size: 4rem;
+    font-weight: bold;
+    display: inline-flexbox;
+}
+
+#location {
+    text-align: justify;
+    margin-top: -4%;
+    padding-left: 35%;
+    font-size: 1.3rem;
+    word-wrap: break-word;
+}
+
+#forecast {
+    margin-top: 4%;
+    color: rgb(209, 236, 58);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px;
+    text-transform: capitalize;
+    word-wrap: break-word;
+}
 
 footer {
     color: white;
     align-items: center;
     font-family: monospace;
     margin-top: 15%;
+    font-weight: 600;
+
 }
 
 a {
-    color: rgb(240, 255, 105);
+    color: rgb(209, 236, 58);
     text-decoration: none;
 }
 
@@ -168,16 +200,43 @@ a:hover {
 
     #catchephrase {
         margin-top: -8.5%;
-        margin-bottom: 5%;
-        font-size: 1rem;
+        margin-bottom: 10%;
+        font-size: 1.1rem;
         text-align: center;
     }
 
-    #message-1,
-    #message-2 {
-        margin-top: 5%;
+    #forecast {
+        margin-top: 15%;
         font-size: 1rem;
         text-transform: capitalize;
+        word-wrap: break-word;
+    }
+
+
+
+    .main-icons {
+        margin-top: 6%;
+        margin-left: -45%;
+    }
+
+    #temprature,
+    #location {
+        margin-top: -25%;
+        margin-left: 68%;
+        color: rgb(209, 236, 58);
+
+
+        font-family: Montserrat;
+        font-size: 3.2rem;
+        font-weight: bold;
+        display: inline-flexbox;
+    }
+
+    #location {
+        text-align: justify;
+        margin-top: -10%;
+        padding-left: 2%;
+        font-size: 1rem;
         word-wrap: break-word;
     }
 

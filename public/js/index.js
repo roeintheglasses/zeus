@@ -1,77 +1,92 @@
 console.log('Client side javascript file is loaded!')
+var skycons = new Skycons({
+    "color": "rgb(209, 236, 58)"
+});
+
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
-const messageOne = document.querySelector('#message-1')
-const messageTwo = document.querySelector('#message-2')
-const weatherIcon = document.querySelector('#weather-icon')
+const messageOne = document.querySelector('#location')
+const messageTwo = document.querySelector('#forecast')
+const currentTemprature = document.querySelector('#temprature')
+const mainWeatherIconCanvas = document.querySelector('#main-weather-icon')
+const locateMeButton = document.querySelector('#locate-me')
+const loading = document.querySelector('#loading')
 
-
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showForecast, manualForecast);
-
+locateMeButton.onclick = function () {
+    navigator.geolocation.getCurrentPosition(showForecast, locationError);
 }
 
-function manualForecast(error) {
+showManualForecast()
+
+
+function locationError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            showManualForecast()
+            messageOne.textContent = 'Location access is not available. \nPlease use manual search!'
             break;
         case error.POSITION_UNAVAILABLE:
-            showManualForecast()
+            messageOne.textContent = 'Location access is not available. \nPlease use manual search!'
             break;
         case error.TIMEOUT:
-            showManualForecast()
+            messageOne.textContent = 'Location access is not available. \nPlease use manual search!'
             break;
         case error.UNKNOWN_ERROR:
-            showManualForecast()
+            messageOne.textContent = 'Location access is not available. \nPlease use manual search!'
             break;
     }
 }
 
-
 function showManualForecast() {
-
-    messageOne.textContent = 'Location access is not available. \nPlease use manual search!'
-    messageTwo.textContent = ''
 
     weatherForm.addEventListener('submit', (e) => {
         e.preventDefault()
 
         const location = search.value
-
-        messageOne.textContent = 'Loading...'
+        messageOne.textContent = ''
         messageTwo.textContent = ''
+        currentTemprature.textContent = ''
+        skycons.remove(mainWeatherIconCanvas)
+        loading.textContent = 'Loading...'
 
         fetch('/weather?address=' + location).then((response) => {
             response.json().then((data) => {
+                loading.textContent = ''
                 if (data.error) {
                     messageOne.textContent = data.error
                 } else {
                     messageOne.textContent = data.location
                     messageTwo.textContent = data.forecast
+                    currentTemprature.textContent = data.temprature + "°"
+                    skycons.set(mainWeatherIconCanvas, data.icon)
+                    skycons.play()
                 }
             })
         })
     })
 }
 
-
 function showForecast(position) {
 
     const address = position.coords.longitude + ',' + position.coords.latitude
-    messageOne.textContent = 'Loading...'
+    messageOne.textContent = ''
     messageTwo.textContent = ''
-    console.log('/weather?address=' + address)
+    currentTemprature.textContent = ''
+    loading.textContent = 'Loading...'
+    skycons.remove(mainWeatherIconCanvas)
+
 
     fetch('/weather?address=' + address).then((response) => {
         response.json().then((data) => {
+            loading.textContent = ''
             if (data.error) {
                 messageOne.textContent = data.error
             } else {
                 messageOne.textContent = data.location
                 messageTwo.textContent = data.forecast
-                weatherIcon.className = data.icon
+                currentTemprature.textContent = data.temprature + "°"
+                skycons.set(mainWeatherIconCanvas, data.icon)
+                skycons.play()
             }
         })
     })

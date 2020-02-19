@@ -8,16 +8,16 @@
     <title>Zeus</title>
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
+	<script src="https://kit.fontawesome.com/fcfa154dc8.js" crossorigin="anonymous"></script>
+    <script src="/js/skycons.js"></script>
     
 </head>
 
 <body>
-
     <div class="container">
 		<div class="row">
 			<div class="intro col-12">
             {{>header}}
-			
 				<div>
 					<div class="border1"></div>
 					<div c </div> </div> </div> <div class="row">
@@ -25,24 +25,24 @@
 							<p id="catchephrase">Dumb weather app for super smart people.</p>
 						</div>
 					</div>
-
 					<div class="row">
-						<form class="col-12">
+						<form id="locationInput">
 							<input id="userInput" type="text" placeholder="Enter location here!">
-							<button id="enter">Search</i></button>
+							<button type="submit" id="enter"><i class="fas fa-search-location"></i></button>
 						</form>
+						<button id="locate-me"><i class="fas fa-map-marked-alt"></i></button>
 					</div>
 
-					<i id = "weather-icon" class = ""></i>
-                    <pre id="message-1"></pre>
-                    <pre id="message-2"></pre>
+					<figure class="main-icons">
+						<canvas id="main-weather-icon" width="128" height="128"></canvas>
+						<pre id="temprature"></pre>
+	                    <pre id="location"></pre>
+					</figure>
+                    <pre id="loading"></pre>
+                    <pre id="forecast"></pre>
 					<pre id="message-3"></pre>
-
 				</div>
-
     {{>footer}}
-
     <script src="/js/index.js"></script>
 </body>
-
 </html>
